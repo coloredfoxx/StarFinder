@@ -1,0 +1,19 @@
+Features Required:
+
+1) Database of observatories and the following current conditions for all of
+   them (limit to 100)
+    -- Get cloud cover
+    -- Transparency
+    -- Seeing
+    -- Darkness
+    -- Wind
+    -- Humidity
+    -- Temparature
+    -> Get all the above conditions and display a final result about the
+    viewing from a scale of 1 - 10.
+
+2) Enter the object name and get RA and Declination
+    -- Keep tracking the object and update as the RA and Declination change
+
+3) Get driving distance from current location
+
