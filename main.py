@@ -3,34 +3,20 @@
 import ephem
 import sys
 from time import gmtime, strftime
+from gps_data import *
 
 #get the current date with time
-#get it from an external time module
-date_time = strftime("%Y/%m/%d %H:%M:%S", gmtime())
+time=str(time)
+date_time=time.replace('T',' ')[:-5]
 print date_time
-
-#get the current lat and lon
-#get it from a gps dongle or an external gps module
-#lat = '42.214559'
-#lon = '-71.143653'
 
 if (len(sys.argv) < 2):
     print "please enter the object name. ex: Mars"
     quit()
 
-if (len(sys.argv) > 2) :
-    lat = sys.argv[2]
-    lon = sys.argv[3]
-else:
-    print "please enter latitude and longitude (lat first)"
-    quit()
-
-print lat
-print lon
-
 obs = ephem.Observer()
-obs.lon = lon
-obs.lat = lat
+obs.lon = longitude
+obs.lat = latitude
 obs.date = date_time
 
 arg = sys.argv[1]
