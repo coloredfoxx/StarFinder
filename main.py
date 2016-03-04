@@ -1,5 +1,4 @@
 #!/usr/bin/python
-
 import ephem
 import sys
 from time import gmtime, strftime
@@ -8,10 +7,11 @@ from gps_data import *
 #get the current date with time
 time=str(time)
 date_time=time.replace('T',' ')[:-5]
-print date_time
+#degug message
+#print date_time,'\n',latitude,'\n',longitude,'\n',altitude
 
 if (len(sys.argv) < 2):
-    print "please enter the object name. ex: Mars"
+    print "please enter the object name argument. ex: 'python main.py Mars'"
     quit()
 
 obs = ephem.Observer()
